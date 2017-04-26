@@ -1,0 +1,10 @@
+<h1>Profile</h1>
+ <%= image_tag @bio.image.url(:medium)%><br/>
+<h3> username: <%=@bio.username%></h3>
+<br>
+<h3> email: <%=@bio.email%> </h3>
+<br>
+ 
+<%= link_to 'Edit', edit_bio_path(@bio) %> |
+
+<%= link_to 'home', movies_path%>

@@ -1,0 +1,33 @@
+<div> 
+<strong><%=link_to "profile",bio_path %></strong>
+</div>
+<div>
+<br>
+<br>
+  <%= image_tag @movie.image.url(:medium)%><br/>
+  </div>
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<h2> Reviews!!</h2>
+<% if @review.present? %>
+<p> No reviews yet !!</p>
+<%else%>
+<% @reviews.each do |review|%>
+<p>Rating :<%=review.rating%></p>
+<p>Comment :<%=review.comment%></p>
+<p>User : <%=review.user.email%></p>
+<%end%>
+<%end%>
+
+
+<%= link_to "write reviews",new_movie_review_path(@movie),class:"btn-btn-danger"%>
+<%= link_to 'Edit', edit_movie_path(@movie) %> 
+<%= link_to 'Back',  movies_path%>
