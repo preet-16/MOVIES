@@ -1,6 +1,9 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-
+qwertyuiop[]
+qwertyuio
+qwertyuio[pojhgfdsa]
+ddddddddddddddddddddddddd
   # GET /movies
   # GET /movies.json
   def index
